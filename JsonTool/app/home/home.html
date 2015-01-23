@@ -1,0 +1,52 @@
+﻿<div class="container">
+    <div class="jumbotron">
+        <h1>JsonTool</h1>
+    </div>
+</div>
+
+<div class="container">
+    <ul>
+        <li>Real-time updates.</li>
+        <li>Your data never leave the browser!</li>
+    </ul>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-12">
+                <br />
+                <br />
+                <textarea class="form-control pull-left" rows="4" placeholder="Type something..." ng-model="inputText" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <br />
+        <br />
+        <div class="col-md-4">
+            <h3>Prettified:</h3>
+            <a class="btn btn-primary btn-sm" ng-click="demoPrettify()"
+               data-toggle="tooltip" title="Clicking this will change the input text.">
+                Demo data
+            </a>
+            <textarea style="cursor:text" class="form-control" rows="10" readonly>{{inputText | prettifyJson}}</textarea>
+        </div>
+        <div class="col-md-4">
+            <h3>Encoded as JSON string</h3>
+            <a class="btn btn-primary btn-sm" ng-click="demoEncodeAsString()"
+               data-toggle="tooltip" title="Clicking this will change the input text.">
+                Demo data
+            </a>
+            <textarea style="cursor:text" class="form-control" rows="10" readonly>{{inputText | encodeAsString}}</textarea>
+        </div>
+        <div class="col-md-4">
+            <h3>Decoded string</h3>
+            <a class="btn btn-primary btn-sm" ng-click="demoDecodeString()"
+               data-toggle="tooltip" title="Clicking this will change the input text.">
+                Demo data
+            </a>
+            <textarea style="cursor:text" class="form-control" rows="10" readonly>{{inputText | decodeString}}</textarea>
+        </div>
+    </div>
+</div>
